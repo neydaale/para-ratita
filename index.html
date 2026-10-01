@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rata y queso</title>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<canvas id="c"></canvas>
+<div id="title"></div>
+<div id="hint">Mueve la pantalla rata queso</div>
+<button id="music">Dame pata</button>
+<input id="file" type="file" accept="audio/*" hidden>
+<div id="intro"><div class="car">🏎️</div><span>Toca con tu patita de rata</span></div>
+<div id="ov"><div id="card"><div class="big" id="ce"></div><h2 id="ct"></h2><p id="cm"></p><button id="cx">Cerrar</button></div></div>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+  // ===== EDITA AQUÍ TU DEDICATORIA (\n = salto de línea) =====
+  const DEDICATORIA = {
+    titulo: 'Para ti ratita',
+    texto: 'Ratita amorcito este detallito es para ti con mucho amor\nCada autito dice lo que siento por ti aunque falta pero espero que te guste\nTe amo, solo a ti mi Jose Josue Miqui Luna \n De tu ratita Neyda la unica para ti <3'
+  };
+  // ===========================================================
+  document.getElementById('music').onclick = () => {
+    document.getElementById('ce').innerHTML = '<div style="font-size:64px">💌</div>';
+    document.getElementById('ct').textContent = DEDICATORIA.titulo;
+    document.getElementById('cm').textContent = DEDICATORIA.texto;
+    document.getElementById('ov').style.display = 'flex';
+  };
+</script>
+</body></html>
